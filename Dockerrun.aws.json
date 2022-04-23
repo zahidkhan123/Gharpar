@@ -1,0 +1,12 @@
+{
+    "AWSEBDockerrunVersion": "2",
+    "Image": {
+      "Name": "appsgenii/gharpar-admin",
+      "Update": "true"
+    },
+    "Ports": [
+      {
+        "ContainerPort": "3000"
+      }
+    ]
+  }

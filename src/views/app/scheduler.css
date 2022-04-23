@@ -1,0 +1,139 @@
+.fc-unthemed {
+  font-size: 14px !important;
+  margin: 20px 16px 0;
+}
+
+.fc-license-message {
+  display: none;
+  position: relative !important;
+}
+
+.fc-bg {
+  position: relative !important;
+}
+
+/* New Calender Changes */
+
+#gharpar-schedular {
+  display: block;
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+#gharpar-schedular aside {
+  width: 20%;
+  padding: 0 !important;
+  border-right: 5px solid transparent;
+  float: left;
+}
+
+#gharpar-schedular ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+#gharpar-schedular aside li:not(:last-of-type) {
+  border-bottom: 1px solid #fff;
+}
+
+#gharpar-schedular li {
+  height: 90px;
+}
+
+#gharpar-schedular aside li {
+  padding: 0 15px;
+  background-color: #efefef;
+  line-height: 1.457;
+}
+
+#gharpar-schedular ul,
+#gharpar-schedular li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#gharpar-schedular section {
+  width: 80%;
+  padding: 0 !important;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: inline-block;
+}
+
+#gharpar-schedular section time {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+#gharpar-schedular ul.room-timeline {
+  border-left: none;
+  position: relative;
+  overflow-x: hidden;
+  width: 4200px;
+}
+
+#gharpar-schedular ul.room-timeline li {
+  border-top: 1px solid grey;
+}
+
+#gharpar-schedular ul.room-timeline li:last-of-type {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+#gharpar-schedular .time-entry {
+  background-color: #ec6a5e;
+  transition: 200ms background-color;
+  height: 90px;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  padding: 0 10px;
+  white-space: normal;
+  overflow: hidden;
+  color: #fff;
+  border: 1px solid #e32c1b;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+header {
+  /* height: 46px; */
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  font-size: 0;
+  white-space: nowrap;
+  display: block;
+}
+
+header ul {
+  padding: 0;
+  margin: 0 0 0 20%;
+  overflow-x: scroll;
+}
+
+header li {
+  display: inline-block;
+  font-size: 1rem;
+  overflow: visible;
+  width: 280px;
+  line-height: 46px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  height: unset;
+  border-left: 1px solid;
+}
+.time-slots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.time-slots span {
+  border-right: 1px solid;
+  width: 100%;
+}
+.time-slots span:last-child {
+  border-right: none;
+}

@@ -1,0 +1,47 @@
+.client-image {
+  position: relative;
+}
+
+.bubble-notification::before {
+  content: "x";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  top: 0;
+  right: 0;
+  border-radius: 50px;
+  line-height: 1.3;
+  font-size: 18px;
+  color: wheat;
+}
+.bubble-verified::before {
+  content: "xx" !important;
+  background-color: green;
+}
+.bubble-unverified::before {
+  background-color: yellow;
+}
+.bubble-blocked::before {
+  background-color: gray;
+}
+.bubble-rejected::before {
+  background-color: red;
+}
+
+.text-area {
+  width: "85%" !important;
+  border-radius: "30px" !important;
+  padding: "12px 0px 0px 8px" !important;
+}
+.textarea:focus {
+  outline: none !important;
+}
+.el-icon-close {
+  display: none;
+}
+
+.gender-badge {
+  background-color: limegreen !important;
+}

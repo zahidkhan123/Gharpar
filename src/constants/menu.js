@@ -1,0 +1,416 @@
+const data = [
+  {
+    id: "orders",
+    icon: "iconsminds-receipt-4",
+    label: "dashboards.orders",
+    to: "/app/orders/list",
+    action: "orders/index",
+  },
+  {
+    id: "scheduler",
+    icon: "iconsminds-map2",
+    label: "menu.scheduler",
+    to: "/app/scheduler",
+    action: "order_jobs/scheduler",
+  },
+  {
+    id: "clients",
+    icon: "simple-icon-people",
+    label: "menu.clients",
+    to: "/app/clients/list",
+    action: "users/index",
+  },
+  {
+    id: "technicians",
+    icon: "simple-icon-people",
+    label: "menu.technicians",
+    to: "/app/technicians/list",
+    action: "technicians/index",
+  },
+  {
+    // id: "inventory",
+    icon: "simple-icon-docs",
+    label: "Reports",
+    to: "/",
+    subs: [
+      {
+        id: "daily_report_csr",
+        icon: "simple-icon-doc",
+        label: "Daily Report CSR",
+        to: "/app/daily_reports_csr/list",
+        action: "reports/csr_daily_order_report",
+      },
+      {
+        id: "daily_report_finance",
+        icon: "simple-icon-doc",
+        label: "Daily Report Finance",
+        to: "/app/daily_reports_finance/list",
+        action: "reports/finance_daily_order_report",
+      },
+      // {
+      //   id: "monthly_report_client",
+      //   icon: "simple-icon-doc",
+      //   label: "Monthly Report Client",
+      //   to: "/app/monthly_reports_client/list",
+      //   action: "reports/finance_daily_order_report",
+      // },
+      {
+        id: "daily_report_sales",
+        icon: "simple-icon-doc",
+        label: "Daily Sales Report",
+        to: "/app/daily_reports_sales/list",
+        action: "reports/daily_sales_report",
+      },
+      {
+        id: "service_based_report",
+        icon: "simple-icon-doc",
+        label: "Service Based Report",
+        to: "/app/service_based_report/list",
+        action: "reports/service_based_report",
+      },
+      {
+        id: "service_prices_report",
+        icon: "simple-icon-doc",
+        label: "Service Prices Report",
+        to: "/app/service_prices_report/list",
+        action: "reports/service_prices_report",
+      },
+      {
+        id: "technician_jobs_report",
+        icon: "simple-icon-doc",
+        label: "Technician Jobs Report",
+        to: "/app/technician_jobs_report/list",
+        action: "reports/technician_jobs_report",
+      },
+    ],
+  },
+  {
+    id: "settings",
+    icon: "simple-icon-settings",
+    label: "menu.settings",
+    to: "/",
+    subs: [
+      {
+        id: "cities",
+        icon: "iconsminds-map2",
+        label: "menu.cities",
+        to: "/app/cities/list",
+        action: "cities/index",
+      },
+      {
+        id: "service_categories",
+        icon: "simple-icon-layers",
+        label: "menu.service_categories",
+        to: "/app/service_categories/list",
+        action: "service_categories/index",
+      },
+      {
+        id: "services",
+        icon: "simple-icon-people",
+        label: "menu.addons",
+        to: "/app/addons/list",
+        action: "services/index",
+      },
+      {
+        id: "time_seeting",
+        icon: "simple-icon-settings",
+        label: "Time Settings",
+        to: "/app/settings/list",
+        action: "settings/index",
+      },
+      {
+        id: "system_setting",
+        icon: "simple-icon-settings",
+        label: "System Settings",
+        to: "/app/system_settings/list",
+        action: "system_settings/index",
+      },
+      {
+        id: "sms_templates",
+        icon: "iconsminds-mail-settings",
+        label: "SMS Templates",
+        to: "/app/sms_templates/list",
+        action: "sms_templates/index",
+      },
+      {
+        id: "deals",
+        icon: "simple-icon-rocket",
+        label: "Deals",
+        to: "/app/deals/list",
+        action: "deals/index",
+      },
+      {
+        id: "analytics",
+        icon: "simple-icon-book-open",
+        label: "Analytics",
+        to: "/app/analytics/list",
+        action: "reports/index",
+      },
+      {
+        id: "csrs",
+        icon: "simple-icon-people",
+        label: "menu.csr",
+        to: "/app/csr/list",
+        action: "csrs/index",
+      },
+      {
+        id: "coupons",
+        icon: "iconsminds-dollar",
+        label: "Coupons",
+        to: "/app/coupons/list",
+        action: "coupons/index",
+      },
+      {
+        id: "roles",
+        icon: "simple-icon-book-open",
+        label: "Roles",
+        to: "/app/roles/list",
+        action: "roles/index",
+      },
+      {
+        id: "assign-role",
+        icon: "iconsminds-affiliate",
+        label: "Assign Role",
+        to: "/app/assign_role/list",
+        action: "user_roles/index",
+      },
+      {
+        id: "push-notification",
+        icon: "iconsminds-speach-bubble-7",
+        label: "Push Notification",
+        to: "/app/push_notification/list",
+        action: "push_notifications/index",
+      },
+      {
+        id: "global-banner",
+        icon: "simple-icon-globe",
+        label: "Global Banner",
+        to: "/app/global_banner/list",
+        action: "global_banners/index",
+      },
+      // {
+      //   id: "referral_analytics",
+      //   icon: "iconsminds-dollar",
+      //   label: "Referral Analytics",
+      //   to: "/app/referral_analytics/list",
+      //   action: "referral_analytics/index",
+      // },
+      {
+        id: "gift-hampers",
+        icon: "simple-icon-trophy",
+        label: "Gift Hampers",
+        to: "/app/gift_hampers/list",
+        action: "gift_hampers/index",
+      },
+      {
+        id: "activity",
+        icon: "iconsminds-map2",
+        label: "Activity Log",
+        to: "/app/activity_logs/list",
+        action: "activity_logs/index",
+      },
+    ],
+  },
+  // {
+  //   id: "inventory",
+  //   icon: "simple-icon-settings",
+  //   label: "Inventory",
+  //   to: "/",
+  //   subs: [
+  //     {
+  //       id: "product_categories",
+  //       icon: "iconsminds-map2",
+  //       label: "Product Category",
+  //       to: "/app/product_categories/list",
+  //       action: "product_categories/index",
+  //     },
+  //     {
+  //       id: "toolkits",
+  //       icon: "iconsminds-map2",
+  //       label: "Toolkits",
+  //       to: "/app/toolkits/list",
+  //       action: "toolkits/index",
+  //     },
+  //     {
+  //       id: "shops",
+  //       icon: "iconsminds-map2",
+  //       label: "Shops",
+  //       to: "/app/shops/list",
+  //       action: "shops/index",
+  //     },
+  //     {
+  //       id: "inventories",
+  //       icon: "iconsminds-map2",
+  //       label: "Inventories",
+  //       to: "/app/inventories/list",
+  //       action: "inventory_stocks/index",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "ui",
+  //   icon: "iconsminds-pantone",
+  //   label: "menu.ui",
+  //   to: "/app/ui",
+  //   subs: [
+  //     {
+  //       id: "ui-forms",
+  //       label: "menu.forms",
+  //       to: "/app/ui/forms",
+  //       subs: [
+  //         {
+  //           icon: "simple-icon-notebook",
+  //           label: "menu.layouts",
+  //           to: "/app/ui/forms/layouts",
+  //         },
+  //         {
+  //           icon: "simple-icon-puzzle",
+  //           label: "menu.components",
+  //           to: "/app/ui/forms/components",
+  //         },
+  //         {
+  //           icon: "simple-icon-check",
+  //           label: "menu.validations",
+  //           to: "/app/ui/forms/validations",
+  //         },
+  //         {
+  //           icon: "simple-icon-magic-wand",
+  //           label: "menu.wizard",
+  //           to: "/app/ui/forms/wizard",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       id: "ui-components",
+  //       label: "menu.components",
+  //       to: "/app/ui/components",
+  //       subs: [
+  //         {
+  //           icon: "simple-icon-bell",
+  //           label: "menu.alerts",
+  //           to: "/app/ui/components/alerts",
+  //         },
+  //         {
+  //           icon: "simple-icon-badge",
+  //           label: "menu.badges",
+  //           to: "/app/ui/components/badges",
+  //         },
+  //         {
+  //           icon: "simple-icon-control-play",
+  //           label: "menu.buttons",
+  //           to: "/app/ui/components/buttons",
+  //         },
+  //         {
+  //           icon: "simple-icon-layers",
+  //           label: "menu.cards",
+  //           to: "/app/ui/components/cards",
+  //         },
+  //         {
+  //           icon: "simple-icon-picture",
+  //           label: "menu.carousel",
+  //           to: "/app/ui/components/carousel",
+  //         },
+  //         {
+  //           icon: "simple-icon-chart",
+  //           label: "menu.charts",
+  //           to: "/app/ui/components/charts",
+  //         },
+  //         {
+  //           icon: "simple-icon-arrow-up",
+  //           label: "menu.collapse",
+  //           to: "/app/ui/components/collapse",
+  //         },
+  //         {
+  //           icon: "simple-icon-arrow-down",
+  //           label: "menu.dropdowns",
+  //           to: "/app/ui/components/dropdowns",
+  //         },
+  //         {
+  //           icon: "simple-icon-book-open",
+  //           label: "menu.editors",
+  //           to: "/app/ui/components/editors",
+  //         },
+
+  //         {
+  //           icon: "simple-icon-star",
+  //           label: "menu.icons",
+  //           to: "/app/ui/components/icons",
+  //         },
+  //         {
+  //           icon: "simple-icon-note",
+  //           label: "menu.input-groups",
+  //           to: "/app/ui/components/input-groups",
+  //         },
+  //         {
+  //           icon: "simple-icon-screen-desktop",
+  //           label: "menu.jumbotron",
+  //           to: "/app/ui/components/jumbotron",
+  //         },
+  //         {
+  //           icon: "simple-icon-map",
+  //           label: "menu.maps",
+  //           to: "/app/ui/components/maps",
+  //         },
+  //         {
+  //           icon: "simple-icon-docs",
+  //           label: "menu.modal",
+  //           to: "/app/ui/components/modal",
+  //         },
+  //         {
+  //           icon: "simple-icon-cursor",
+  //           label: "menu.navigation",
+  //           to: "/app/ui/components/navigation",
+  //         },
+  //         {
+  //           icon: "simple-icon-pin",
+  //           label: "menu.popover-tooltip",
+  //           to: "/app/ui/components/popover-tooltip",
+  //         },
+  //         {
+  //           icon: "simple-icon-shuffle",
+  //           label: "menu.sortable",
+  //           to: "/app/ui/components/sortable",
+  //         },
+  //         {
+  //           icon: "simple-icon-grid",
+  //           label: "menu.tables",
+  //           to: "/app/ui/components/tables",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "dashboards",
+  //   icon: "iconsminds-shop-4",
+  //   label: "menu.dashboards",
+  //   to: "/app/dashboards",
+  //   subs: [
+  //     {
+  //       icon: "simple-icon-briefcase",
+  //       label: "menu.default",
+  //       to: "/app/dashboards/default",
+  //     },
+  //   ],
+  // },
+];
+
+if (localStorage.getItem("user_default_role") === "TAM") {
+  data.push({
+    id: "complaint",
+    icon: "simple-icon-book-open",
+    label: "Complaint",
+    to: "/app/complaints/list",
+    action: "order_job_complaints/index",
+  });
+} else {
+  data.push({
+    id: "feedbacks",
+    icon: "simple-icon-book-open",
+    label: "Feedback",
+    to: "/app/feedbacks/list",
+    action: "reports/ratings",
+  });
+}
+
+export default data;

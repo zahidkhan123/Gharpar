@@ -1,0 +1,19 @@
+:root {
+  --avatar: 3.3rem;
+  /* change this value anything, e.g., 100px, 10rem, etc. */
+}
+
+.circle-tech {
+  background-color: #ccc;
+  border-radius: 50%;
+  height: var(--avatar);
+  text-align: center;
+  width: var(--avatar);
+}
+
+.initials-tech {
+  font-size: calc(var(--avatar) / 2.5); /* 50% of parent */
+  line-height: 1;
+  position: relative;
+  top: calc(var(--avatar) / 3); /* 25% of parent */
+}

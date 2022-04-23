@@ -1,0 +1,15 @@
+.table-bordered thead tr th {
+  border: 2px solid black !important;
+}
+/* .table tbody tr td {
+  border: 1px solid black !important;
+}
+.table thead th {
+  border: 1px solid black !important;
+} */
+.custom-border tbody tr td {
+  border: 1px solid black !important;
+}
+.custom-border thead th {
+  border: 1px solid black !important;
+}

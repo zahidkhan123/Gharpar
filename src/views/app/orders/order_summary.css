@@ -1,0 +1,205 @@
+.cutomer-recep{
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;   
+    background: #F8FAFC;
+    /* box-shadow: 0px 15px 60px #00000014; */
+    padding-bottom: 40px;
+}
+
+.customer-dtl {
+    padding: 22px 62px;
+    background: #F3F1F0;
+    /* border-radius: 20px 20px 0px 0px; */
+    display: flex;
+}
+.date-time{
+    display: flex;
+    flex-direction: column;
+    max-width: 134px;
+    padding: 18px;
+    background:#17222D;
+    border-radius: 8px;
+    color: #F68D2F;
+}
+.date-time label:last-child{
+    color: #ffffff;
+    font-weight: 400;
+}
+.personal-dtl{
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+}
+.personal-dtl label:last-child{
+    color: #F68D2F;
+}
+.personal-dtl label:first-child{
+    font-size: 20px;
+}
+.personal-dtl label small{
+    color: #2FB5F6;
+}
+.order-summary{
+    padding: 30px 62px 40px;
+    background-color: #ffffff;
+}
+.order-summary thead{
+    background: #F8F2EC;
+    border-radius: 10px;
+    line-height: 36px;
+}
+.order-summary small{
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #E5E5E5;
+    border-radius: 4px;
+    width: 110px;
+    display: block;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 4px;
+
+}
+.order-summary .table tbody tr{
+    border-bottom: 1px solid #E5E5E5;
+}
+/* .order-summary .table tbody tr:nth-child(2) td:nth-child(2) span:first-child{
+    color: #8D9296;
+    padding-top: 10px;
+    padding-left: 10px;
+} */
+.order-summary .table tbody tr td span{
+    padding-top: 10px;
+}
+.summary-inst {
+    width: 50%;
+}
+.summary-inst textarea {
+    width: 90%;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    background: #F6F5F4;
+    border: 1px dashed #DFDFDF;
+    border-radius: 6px;
+    resize: none;
+    margin-top: 10px;
+}
+.total-bill table{
+    margin-top: 10px;
+}
+.total-bill table td{
+    padding:15px 25px;
+}
+.total-bill table tr:nth-child(3) {
+    color: #E01515;
+}
+
+.cutomer-recep .cancel-btn {
+    margin-right: 20px;
+    color: #8D9296;
+}
+
+.cutomer-recep .done-btn {
+    background-color: #F68D2F;
+    box-shadow: none;
+    padding: 8px;
+    color: #fff !important;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 767.98px) {
+    .cutomer-recep{
+        width: 90%;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+    .personal-dtl{
+        font-size: 12px;
+    }
+    .personal-dtl {
+        padding-left: 15px;
+    }
+    .personal-dtl label small{
+        font-size: 10px;
+    }
+    .personal-dtl label:first-child {
+        font-size: 12px;
+    }
+    .date-time label:first-child{
+        font-size: 15px;
+    }
+    .date-time label:last-child{
+        font-size: 12px;
+    }
+    .customer-dtl {
+        padding: 15px;
+    }
+    .order-summary{
+        padding: 15px;
+    }
+    .order-summary table{
+        margin-bottom: 0;
+    }
+    .order-summary table thead th:first-child{
+        display: none;
+    }
+    .order-summary table tbody td:first-child{
+        display: none;
+    }
+    .order-summary table thead th:nth-child(2){
+        width: 60%;
+    }
+    .flex-sm-column-reverse{
+        flex-direction: column-reverse;
+    }
+    .total-bill table td:first-child{
+    display: none;
+    }
+    .total-bill table{
+        margin-top: 0;
+        width: 100%;
+    }
+    .total-bill table td{
+        padding-bottom: 0;
+    }
+    .total-bill table td:nth-child(2){
+        padding-left: 0;
+    }
+    .total-bill table td:last-child{
+        padding-right: 15px;
+        text-align: right;
+    }
+    .summary-inst {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .summary-inst textarea {
+        width: 100%;
+    }
+    .cutomer-recep .cancel-btn{
+        display: none;
+    }
+    .cutomer-recep .done-btn{
+        display: none;
+    }
+    .summary-inst label{
+        display: none;
+    }
+    .order-summary .table tbody tr:nth-child(2) td:nth-child(2) span:first-child { 
+        color: #17222D;
+        background-color: #F6F5F4;
+    }
+}
+
+/* Added by Inzamam */
+
+.modal-right .modal-dialog {
+    max-width: 80%;
+}

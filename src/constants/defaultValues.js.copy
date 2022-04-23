@@ -1,0 +1,107 @@
+/* 
+Menu Types:
+"menu-default", "menu-sub-hidden", "menu-hidden"
+*/
+import axios from "axios";
+import { NotificationManager } from "../components/common/react-notifications";
+
+export const defaultMenuType = "menu-default";
+
+export const subHiddenBreakpoint = 1440;
+export const menuHiddenBreakpoint = 768;
+export const defaultLocale = "en";
+export const localeOptions = [
+  { id: "en", name: "English - LTR", direction: "ltr" },
+  { id: "es", name: "Español", direction: "ltr" },
+  { id: "enrtl", name: "English - RTL", direction: "rtl" },
+];
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyBBksq-Asxq2M4Ot-75X19IyrEYJqNBPcg",
+  authDomain: "gogo-react-login.firebaseapp.com",
+  databaseURL: "https://gogo-react-login.firebaseio.com",
+  projectId: "gogo-react-login",
+  storageBucket: "gogo-react-login.appspot.com",
+  messagingSenderId: "216495999563",
+};
+
+export const searchPath = "/app/pages/search";
+export const servicePath = "http://192.168.1.34:3000/admin";
+// export const servicePath ="https://api.gharpar.co/"
+// export const servicePath = "https://demoapi.gharpar.co/admin";
+// export const socketPath = "wss://demoapi.gharpar.co/admin";
+// export const servicePath ="https://gharparapi.stagingbuilds.com/"
+// export const servicePath = "http://localhost:3000/admin";
+// export const partnerAppPath = "https://gharpar-beautician-app.s3-ap-southeast-1.amazonaws.com/gharpar-partner-app-staging.apk";
+export const authHeaders = {
+  "Content-Type": "application/json",
+  "AUTH-TOKEN": localStorage.getItem("auth_token"),
+};
+
+// AWS ENVS
+
+export const AWS_S3_ACCESS_KEY = 
+export const AWS_S3_SECRET_ACCESS_SECRET =
+  
+export const AWS_S3_REGION = 
+export const AWS_S3_BUCKET_NAME =
+export const AWS_S3_Url =
+  
+export const AWS_DIR_NAME = 
+
+
+// export const servicePath = "http://173.249.30.193:81";
+// export const servicePath = "https://api.coloredstrategies.com";
+
+// export const servicePath = "http://173.249.30.193:81";
+// export const servicePath = "https://api.coloredstrategies.com";
+
+/* 
+Color Options:
+"light.purple", "light.blue", "light.green", "light.orange", "light.red", "dark.purple", "dark.blue", "dark.green", "dark.orange", "dark.red"
+*/
+export const themeColorStorageKey = "__theme_color";
+export const isMultiColorActive = true;
+export const defaultColor = "light.orange";
+export const isDarkSwitchActive = true;
+export const defaultDirection = "ltr";
+export const themeRadiusStorageKey = "__theme_radius";
+export const isDemo = false;
+
+export const check_permission = async (controller_action, url) => {
+  let self = this;
+  let permission = false;
+  let controller_name = controller_action.split("/")[0];
+  let action_name = controller_action.split("/")[1];
+  await axios
+    .get(
+      servicePath +
+        "/api/v2/role_permissions/check_permission.json?controller_name=" +
+        controller_name +
+        "&action_name=" +
+        action_name,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          "AUTH-TOKEN": localStorage.getItem("auth_token"),
+          "IS-ACCESSIBLE": true,
+        },
+      }
+    )
+    .then((response) => {
+      if (response.status == 200) {
+        if (response.data.is_enabled) {
+          window.location.assign(url);
+        } else {
+          NotificationManager.error(
+            "You are not authorized to access this page",
+            "",
+            5000,
+            () => {},
+            null,
+            "filled"
+          );
+        }
+      }
+    });
+};

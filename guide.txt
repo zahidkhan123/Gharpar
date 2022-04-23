@@ -1,0 +1,45 @@
+RUN COMMAND TO INSTALL ALL DEPENDENCIES
+
+npm install
+
+pm2 start sky.js --watch
+
+pm2 start bf_scrapper.js --watch
+
+pm2 stop sky --watch
+
+pm2 restart all
+
+pm2 monit
+
+pm2 list
+
+pm2 logs
+
+pm2 logs --format
+
+pm2 flush
+
+pm2 install pm2-logrotate
+
+pm2 reloadLogs
+
+pm2 stop app_name
+
+pm2 delete app_name
+
+
+
+RUN COMMAND TO RUN NODE PROCESS IN BACKGROUND
+
+forever start -l forever.log -o out.log -e err.log --watchIgnore "*.log" -w index.js
+
+tail -f  /home/live/.forever/forever.log
+
+OTHER HELPFUL COMMANDS
+
+forever stopall
+
+forever cleanlogs
+
+forever list
